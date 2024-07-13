@@ -1,13 +1,160 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Base Styles */
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Merriweather";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f282;
+  /*position: sticky;
+  top: 0;
+  z-index: 1000;
+  */
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  transition: all 0.3s ease; /* Adding transition for smooth animation */
+}
+.navbar a:hover {
+  color: #f1356d !important;
+  background-color: white !important;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.blog-preview h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+
+#delete-button {
+  color: white;
+  background-color: #f1356d;
+  border: 1.5px solid black;
+  padding: 4px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease; /* Adding transition for smooth animation */
+  box-sizing: border-box; /* Ensuring consistent box size */
+}
+
+#delete-button:hover {
+  color: #f1356d;
+  border-color: white; /* Change border color instead of removing it */
+  background-color: white;
+}
+
+h2 {
+  text-shadow: 1px 1px 4px #fa0c53;
+}
+
+.blog-preview a{
+  text-decoration: none;
+}
+
+.blog-details:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+.blog-details button{
+  align-self: center;
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Adding transition for smooth animation */
+  margin: 15px;
+  height: 40px;
+  width: 70px;
+}
+
+.blog-details button:hover {
+  color: #f1356d;
+  border-color: white; /* Change border color instead of removing it */
+  background-color: white;
+}
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.create:hover {
+  padding-right: 20px;
+  padding-left: 20px;
+  box-shadow: 2px 5px 8px rgba(0,0,0,0.1);
+}
+
+.create label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 20;
+}
+
+.create input, .create textarea, .create select{
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: left;
+  border: 1px solid #cbcbcb49;
+  padding-left: 20;
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.create input:hover, .create textarea:hover, .create select:hover{
+  box-shadow: 1px 1px 4px #f1356d;
+}
+
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Adding transition for smooth animation */
+  margin: 15px;
+}
+
+.create button:hover {
+  color: #f1356d;
+  border-color: white; /* Change border color instead of removing it */
+  background-color: white;
 }

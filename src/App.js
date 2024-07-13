@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Navbar';
+import Home from './home';
+import Create from './create';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BlogDetails from './BlogDetails';
+import NotFound from './NotFound';
 
 function App() {
+  // Can output anything except for a boolean and an object
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="content">
+        <Switch> {/* Switch is used to only render the first route that matches */}
+          <Route exact path="/"> {/* Path is the route */}
+            <Home />
+          </Route>
+          <Route path="/create">
+            <Create />
+          </Route>
+          <Route path="/blogs/:id">
+            <BlogDetails />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
     </div>
+    </Router>
   );
 }
 
